@@ -1,12 +1,60 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello, World!</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-      <h1 class="title">Hello World!</h1>
-      <p id="currentTime"></p>
-      <script src="script.js"></script>
-  </body>
+<head>
+<title>My Website</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f2f2f2;
+  font-family:Arial;
+}
+
+.box{
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+button{
+  padding:10px 20px;
+  margin:10px;
+  border:none;
+  border-radius:6px;
+  background:#333;
+  color:white;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Do you like me? 😊</h2>
+
+  <button onclick="openLove()">Yes</button>
+  <button id="noBtn" onclick="moveNo()">No</button>
+</div>
+
+<script>
+function openLove(){
+  window.location.href="love.html";
+}
+
+function moveNo(){
+  let btn=document.getElementById("noBtn");
+  let x=Math.random()*200-100;
+  let y=Math.random()*200-100;
+  btn.style.transform="translate("+x+"px,"+y+"px)";
+}
+</script>
+
+</body>
 </html>
